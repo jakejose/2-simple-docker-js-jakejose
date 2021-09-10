@@ -17,12 +17,13 @@
   <!-- Custom CSS -->
   <link href="css/styles.css" rel="stylesheet">
 
-  <title>DR. LEGO | HOME</title>
+  <title>DR. LEGO | ABOUT</title>
 </head>
 
 <body>
 
   <!-- index navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">DR. LEGO</a>
@@ -33,13 +34,13 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+            <a class="nav-link" href="index.html">HOME</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="books.html">BOOKS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">ABOUT</a>
+            <a class="nav-link active" aria-current="page" href="about.html">ABOUT</a>
           </li>
         </ul>
         <span class="navbar-text">
@@ -49,23 +50,32 @@
     </div>
   </nav>
 
-  <!-- Welome section -->
+  <!-- Profile Columns -->
 
-<center>
-<h1 id = 'welcomeHeader'>Welcome!</h1>
-
-<a href="https://unsplash.com/photos/8u_2imJaVQs">
-  <img id = 'doctor' src="img/doctor.jpg">
-</a>
-<br>
-<a href="https://unsplash.com/photos/8u_2imJaVQs">View full</a>
-<br>
-Photo by <a href="https://unsplash.com/@bill_oxford?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bill Oxford</a> on <a href="https://unsplash.com/s/photos/hospital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-
-<h2>This is the website for Dr. John S. Lego.</h2>
-<h5>Feel free to browse or contact on the about page</h5>
-</center>
+  <div class="container">
+    <div class="row">
+      <div class="col-9">
+        <h2>Dr. Lego</h2>
+      </div>
+      <!-- https://randomuser.me/photos -->
+      <div class="col-4">
+        <a href="https://randomuser.me/api/portraits/lego/3.jpg"><img class= 'profile' src="img/lego.jpeg" alt="lego"></a>
+        <br><a href="https://randomuser.me/api/portraits/lego/3.jpg">View Full</a>
+        <br>Photo by <a href="randomuser.me">randomuser.me</a></div>
+      <div class="col-6">
+        <h4>Background:</h4><br>
+        <!-- Background list -->
+        <ul class="list-group">
+          <li class="list-group-item active" aria-current="true">Name: John S. Lego DDS</li>
+          <li class="list-group-item">Bloomington, IN</li>
+          <li class="list-group-item">Birthdate: January 7, 1999</li>
+          <li class="list-group-item">Age: 22</li>
+          <!-- Reference: https://css-tricks.com/all-about-mailto-links/  -->
+          <li class="list-group-item">Email:<a href="mailto:jakejose@iu.edu">jakejose@iu.edu</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

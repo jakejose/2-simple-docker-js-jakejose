@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Google Font Link/Reference -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <title>DR. LEGO | BOOKS</title>
+</head>
+
+<body>
+
+  <!-- index navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">DR. LEGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="books.html">BOOKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Thank you for visiting!
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Columns -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-9">
+        <h2>Dr. Lego</h2>
+      </div>
+      <!-- https://randomuser.me/photos -->
+      <div class="col-4">
+        <a href="https://randomuser.me/api/portraits/lego/3.jpg"><img class = 'profile' src="img/lego.jpeg" alt="lego"></a>
+        <br><a href="https://randomuser.me/api/portraits/lego/3.jpg">View Full</a>
+        <br>Photo by <a href="randomuser.me">randomuser.me</a>
+        <h2>Add a new book</h2>
+            <form>
+              <div class="mb-3">
+                <label for="newRow" class="form-label">Row #</label>
+                <input type="number" class="form-control" id="newRow" aria-describedby="rowHelp">
+              </div>
+              <div class="mb-3">
+                <label for="bookName" class="form-label">Book Name</label>
+                <input type="text" class="form-control" id="bookName">
+              </div>
+              <div class="mb-3">
+                  <label for="year" class="form-label">Year</label>
+                  <input type="date" class="form-control" id="year">
+                </div>
+                <div class="mb-3">
+                  <label for="publisher" class="form-label">Publisher</label>
+                  <input type="text" class="form-control" id="publisher">
+                </div>
+                <div class="mb-3">
+                  <label for="pages" class="form-label">Pages</label>
+                  <input type="number" class="form-control" id="pages">
+                </div>
+                <div class="mb-3">
+                  <label for="msrp" class="form-label">MSRP ($)</label>
+                  <input type="number" class="form-control" id="msrp">
+                </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+      <div class="col-6">
+        <h4>Favorite Books:</h4><br>
+        <!-- book table -->
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Year Published</th>
+                <th scope="col">Publisher</th>
+                <th scope="col">Page Count</th>
+                <th scope="col">MSRP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>The Godfather (The Book)</td>
+                <td>Mr. Godfather</td>
+                <td>1980</td>
+                <td>Godfather Publishing</td>
+                <td>300</td>
+                <td>$2.00</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>How to Pass MSIS</td>
+                <td>Kelley School of Business</td>
+                <td>2000</td>
+                <td>IU</td>
+                <td>2143</td>
+                <td>$10.99</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Intro to Github</td>
+                <td>Github Master</td>
+                <td>2015</td>
+                <td>Githubiscool Books</td>
+                <td>123</td>
+                <td>$5.00</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Being a Doctor for Dummies</td>
+                <td>Dr. Lego</td>
+                <td>2020</td>
+                <td>Dr. Lego (Self Published)</td>
+                <td>5000</td>
+                <td>$100.00</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Doctor 101</td>
+                <td>Dr. Lego Sr.</td>
+                <td>1980</td>
+                <td>Lego Books</td>
+                <td>3405</td>
+                <td>$91.99</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Reference for input types: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src='js/randomuser.js' ?></script>
+
+</body>
+
+</html>

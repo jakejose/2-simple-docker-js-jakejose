@@ -1,0 +1,45 @@
+
+
+/* Reference for Bootstrap CSS override: https://stackoverflow.com/questions/46453057/why-is-bootstraps-css-overwriting-my-css*/
+body{
+    background: lightblue;
+    font-family: 'Old Standard TT', serif !important;
+    color: navy !important;
+}
+
+
+table{
+    color: darkblue !important;
+    background-color: lightgoldenrodyellow;
+}
+
+a{
+    color: lightcoral;
+}
+
+/* Declaration by Class */
+
+.navbar-nav{
+    background-color: powderblue;
+}
+
+.profile{
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+/* Styling images reference: https://www.digitalocean.com/community/tutorials/how-to-style-images-with-css */
+
+/* Declaration by ID */
+#welcomeHeader{
+    font-style: italic !important;
+}
+
+#doctor{
+    height: 25%;
+    width: 15%;
+    border-radius: 5px;
+    border: 5px dotted black;
+}
+
+/* reference changing link color: https://htmlcolorcodes.com/tutorials/css-link-color/ */
