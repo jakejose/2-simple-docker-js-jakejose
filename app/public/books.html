@@ -92,7 +92,7 @@
             </form>
         </div>
       <div class="col-6">
-        <h4>Favorite Books:</h4><br>
+        <h4>Favorite Books:<i class="fas fa-sort"></i></h4><br>
         <!-- book table -->
         <table id = 'tableSort'class="table table-striped">
             <thead>
@@ -100,10 +100,10 @@
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
                 <th scope="col">Author</th>
-                <th scope="col">Year Published</th>
+                <th data-sort-method = 'number'scope="col">Year Published</th>
                 <th scope="col">Publisher</th>
-                <th scope="col">Page Count</th>
-                <th scope="col">MSRP</th>
+                <th data-sort-method = 'number'scope="col">Page Count</th>
+                <th data-sort-method = 'dotsep'scope="col">MSRP</th>
               </tr>
             </thead>
             <tbody>
@@ -114,7 +114,7 @@
                 <td>1980</td>
                 <td>Godfather Publishing</td>
                 <td>300</td>
-                <td>$2.00</td>
+                <td>2.00</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
@@ -123,7 +123,7 @@
                 <td>2000</td>
                 <td>IU</td>
                 <td>2143</td>
-                <td>$10.99</td>
+                <td>10.99</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
@@ -132,7 +132,7 @@
                 <td>2015</td>
                 <td>Githubiscool Books</td>
                 <td>123</td>
-                <td>$5.00</td>
+                <td>5.00</td>
               </tr>
               <tr>
                 <th scope="row">4</th>
@@ -141,7 +141,7 @@
                 <td>2020</td>
                 <td>Dr. Lego (Self Published)</td>
                 <td>5000</td>
-                <td>$100.00</td>
+                <td>100.00</td>
               </tr>
               <tr>
                 <th scope="row">5</th>
@@ -150,7 +150,7 @@
                 <td>1980</td>
                 <td>Lego Books</td>
                 <td>3405</td>
-                <td>$91.99</td>
+                <td>91.99</td>
               </tr>
             </tbody>
           </table>
@@ -164,6 +164,10 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
   <script src='js/randomuser.js'></script>
+  <!-- Tablesort tags and reference -->
+  <!-- http://tristen.ca/tablesort/demo/ -->
+  <script src= 'js/tablesort.dotsep.min.js'></script>
+  <script src= 'js/tablesort.number.min.js'></script>
   <script src = 'js/tablesort.min.js'></script>
   <script>
     new Tablesort(document.getElementById('tableSort'));
