@@ -94,7 +94,7 @@
       <div class="col-6">
         <h4>Favorite Books:</h4><br>
         <!-- book table -->
-        <table class="table table-striped">
+        <table id = 'tableSort'class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -163,7 +163,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
-  <script src='js/randomuser.js' ?></script>
+  <script src='js/randomuser.js'></script>
+  <script src = 'js/tablesort.min.js'></script>
+  <script>
+    new Tablesort(document.getElementById('tableSort'));
+  </script>
 
 </body>
 
