@@ -19,19 +19,27 @@ const SomeApp = {
         .catch( (error) => {
             console.error(error);
         });   
+    },
+    methods:{
+      forceUpdate(){
+        let button = document.querySelector('#button')
+          button.addEventListener('click',()=>{
+          this.$forceUpdate(); 
+          })
+      }
+
     }
 
   }
-  
+
 Vue.createApp(SomeApp).mount('#someApp');
 
-//refresh data attempt 1
-// function refresher (){
-//   let button = document.querySelector('#button')
-//   button.addEventListener('click',()=>{
-//     Vue.createApp(SomeApp).mount('#someApp');
-//   })
-// }
+function refresher (){
+  let button = document.querySelector('#button')
+  button.addEventListener('click',()=>{
+    Vue.createApp(SomeApp).mount('#someApp');
+  })
+}
 
 
         
