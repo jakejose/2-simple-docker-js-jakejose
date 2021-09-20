@@ -21,25 +21,13 @@ const SomeApp = {
         });   
     },
     methods:{
-      forceUpdate(){
-        let button = document.querySelector('#button')
-          button.addEventListener('click',()=>{
-          this.$forceUpdate(); 
-          })
+      generate(){
+        const app = Vue.createApp(SomeApp).mount('#someApp');
       }
-
     }
 
   }
 
-Vue.createApp(SomeApp).mount('#someApp');
-
-function refresher (){
-  let button = document.querySelector('#button')
-  button.addEventListener('click',()=>{
-    Vue.createApp(SomeApp).mount('#someApp');
-  })
-}
+const app = Vue.createApp(SomeApp).mount('#someApp');
 
 
-        
