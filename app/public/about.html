@@ -77,9 +77,13 @@
       </div>
     </div>
   </div>
-  <!-- Command re-generating data -->
-  <button @click = 'generate()'id = 'button'type="button" class="btn btn-success">REFRESH</button>
+  <!-- Command re-generating data with submit (not click)-->
+  <form @submit = 'generate'>
+    <button id = 'button'type="submit" class="btn btn-success">REFRESH</button>
+  </form>
   </div>
+
+
   
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
