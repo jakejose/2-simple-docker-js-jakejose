@@ -22,6 +22,8 @@ const SomeApp = {
         });   
     },
     //methods for app
+    //Source for methods:
+  //https://v3.vuejs.org/guide/data-methods.html#data-properties
     methods:{
       generate(){
         const app = Vue.createApp(SomeApp).mount('#someApp');
