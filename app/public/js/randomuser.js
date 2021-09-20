@@ -1,5 +1,6 @@
 console.log("it's alive!");
 const SomeApp = {
+  //data
     data() {
       return {
         result: {},
@@ -20,6 +21,7 @@ const SomeApp = {
             console.error(error);
         });   
     },
+    //methods for app
     methods:{
       generate(){
         const app = Vue.createApp(SomeApp).mount('#someApp');
@@ -27,7 +29,7 @@ const SomeApp = {
     }
 
   }
-
+//mounting app
 const app = Vue.createApp(SomeApp).mount('#someApp');
 
 
