@@ -7,6 +7,7 @@ const SomeApp = {
         dob: []
       }
     },
+    //CODE FROM CLASS SESSION (Professor Tom Gregroy)
     created() {
 
         //fetching
