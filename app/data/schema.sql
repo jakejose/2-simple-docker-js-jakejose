@@ -17,4 +17,5 @@ INSERT INTO books (title, author, yearPublished, publisher, pageCount, MRP) VALU
 ('How to Pass MSIS', 'Kelley School of Business',2000,'IU',2143,'$10.99'),
 ('Intro to Github', 'Github Master',2015,'Githubiscool Books',123,'$5.00'),
 ('Being a Doctor for Dummies', 'Dr. Lego',2020,'Dr. Lego (Self Published)',5000,'$100.00'),
-('Doctor 101', 'Dr. Lego Sr.',1980,'Lego Books',3405,'$91.99');
+('Doctor 101', 'Dr. Lego Sr.',1980,'Lego Books',3405,'$91.99'),
+('New book for HW #5', 'DATABASE',2021,'TEST',1,'$00.00');
