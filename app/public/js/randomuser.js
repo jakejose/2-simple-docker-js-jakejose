@@ -33,6 +33,6 @@ const SomeApp = {
 
   }
 //mounting app
-//const app = Vue.createApp(SomeApp).mount('#someApp');
+const app = Vue.createApp(SomeApp).mount('#someApp');
 
 
