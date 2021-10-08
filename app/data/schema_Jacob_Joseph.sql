@@ -1,6 +1,3 @@
-show databases;
-use newDB;
-
 DROP TABLE IF EXISTS books;
 CREATE TABLE books (
 	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,

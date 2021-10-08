@@ -4,7 +4,8 @@ const SomeApp = {
     data() {
       return {
         result: {},
-        dob: []
+        dob: [],
+        bookList: {}
       }
     },
     //CODE FROM CLASS SESSION (Professor Tom Gregroy)
@@ -34,5 +35,6 @@ const SomeApp = {
   }
 //mounting app
 const app = Vue.createApp(SomeApp).mount('#someApp');
+
 
 

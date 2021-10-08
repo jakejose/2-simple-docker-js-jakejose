@@ -1,5 +1,4 @@
 <?php
-// require 'common.php';
 require 'class/DbConnection.php';
 
 // Step 1: Get a datase connection from our helper class
@@ -9,19 +8,23 @@ $db = DbConnection::getConnection();
 $sql = 'SELECT * FROM books';
 $vars = [];
 
-// if (isset($_GET['guid'])) {
-//   // This is an example of a parameterized query
-//   $sql = 'SELECT * FROM Patient WHERE patientGuid = ?';
-//   $vars = [ $_GET['guid'] ];
-// }
+if (isset($_GET['student'])) {
+  // This is an example of a parameterized query
+  $sql = 'SELECT * FROM offer WHERE studentId = ?';
+
+  //NOT THIS WAY
+  // $sql = 'SELECT * FROM offer WHERE studentId = ' . $_GET['student'];
+
+  $vars = [ $_GET['student'] ];
+}
 
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$patients = $stmt->fetchAll();
+$offers = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
-$json = json_encode($patients, JSON_PRETTY_PRINT);
+$json = json_encode($offers, JSON_PRETTY_PRINT);
 
 // Step 4: Output
 header('Content-Type: application/json');
