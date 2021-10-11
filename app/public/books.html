@@ -119,11 +119,13 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Company</th>
-                  <th>Salary</th>
-                  <th>Bonus</th>
-                  <th>Offer Date</th>
-                  <th>Status</th>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Year Published</th>
+                  <th>Publisher</th>
+                  <th>Page Count</th>
+                  <th>MRP</th>
                 </tr>
               </thead>
                 <tbody>
@@ -133,6 +135,8 @@
                         <td>{{ i.author }}</td>
                         <td>{{ i.yearPublished }}</td>
                         <td>{{ i.publisher }}</td>
+                        <td>{{ i.pageCount }}</td>
+                        <td>{{ i.MRP }}</td>
                     </tr>
                 </tbody>
             </table>      
