@@ -7,13 +7,13 @@ const newApp = {
     },
     computed: {},
     methods: {
-      fetchBookData() {
+      fetchCommentData() {
         fetch('/api/comments/index.php')
         .then( response => response.json() )
         .then( (responseJson) => {
             console.log(responseJson);
-            this.bookList = responseJson;
-            console.log(this.bookList)
+            this.commentsList = responseJson;
+            console.log(this.commentsList)
         })
         .catch( (err) => {
             console.error(err);
@@ -21,7 +21,7 @@ const newApp = {
     }
     },
     created() {
-        this.fetchBookData();
+        this.fetchCommentData();
     }
   
   }
