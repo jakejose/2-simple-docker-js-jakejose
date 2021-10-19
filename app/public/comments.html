@@ -49,16 +49,14 @@
               <a class="nav-link" href="index.html">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="books.html"
-                >BOOKS</a
-              >
+              <a class="nav-link active" aria-current="page" href="books.html">BOOKS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">ABOUT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="comments.html">Comments</a>
-            </li>
+                <a class="nav-link" href="comments.html">Comments</a>
+              </li>
           </ul>
           <span class="navbar-text"> Thank you for visiting! </span>
         </div>
@@ -70,76 +68,26 @@
     <div class="container">
       <div class="row">
         <div class="col-9">
-          <h2>Dr. Lego</h2>
+          <h2>MSIS Comments</h2>
         </div>
         <!-- https://randomuser.me/photos -->
         <div class="col-4">
-          <a href="https://randomuser.me/api/portraits/lego/3.jpg"
-            ><img class="profile" src="img/lego.jpeg" alt="lego"
-          /></a>
-          <br /><a href="https://randomuser.me/api/portraits/lego/3.jpg"
-            >View Full</a
-          >
-          <br />Photo by <a href="randomuser.me">randomuser.me</a>
-          <h2>Add a new book</h2>
-          <form>
-            <div class="mb-3">
-              <label for="newRow" class="form-label">Row #</label>
-              <input
-                type="number"
-                class="form-control"
-                id="newRow"
-                aria-describedby="rowHelp"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="bookName" class="form-label">Book Name</label>
-              <input type="text" class="form-control" id="bookName" />
-            </div>
-            <div class="mb-3">
-              <label for="year" class="form-label">Year</label>
-              <input type="date" class="form-control" id="year" />
-            </div>
-            <div class="mb-3">
-              <label for="publisher" class="form-label">Publisher</label>
-              <input type="text" class="form-control" id="publisher" />
-            </div>
-            <div class="mb-3">
-              <label for="pages" class="form-label">Pages</label>
-              <input type="number" class="form-control" id="pages" />
-            </div>
-            <div class="mb-3">
-              <label for="msrp" class="form-label">MSRP ($)</label>
-              <input type="number" class="form-control" id="msrp" />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
         </div>
-          <div id = 'bookApp'class="col-6">
-            <h4>Favorite Books:<i class="fas fa-sort"></i></h4>
+          <div id = 'commentsApp'class="col-6">
+            <h4>Comments<i class="fas fa-sort"></i></h4>
             <br/>
             <!-- book table -->
-            <table class="table">
+            <table id = 'commentTable' class="table">
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Title</th>
-                  <th>Author</th>
-                  <th>Year Published</th>
-                  <th>Publisher</th>
-                  <th>Page Count</th>
-                  <th>MRP</th>
+                  <th>Comment</th>
                 </tr>
               </thead>
-                <tbody>
-                    <tr v-for="i in bookList">
+                <tbody id="commentTableBody">
+                    <tr v-for="i in commentsList">
                         <td>{{ i.id }}</td>
-                        <td>{{ i.title }}</td>
-                        <td>{{ i.author }}</td>
-                        <td>{{ i.yearPublished }}</td>
-                        <td>{{ i.publisher }}</td>
-                        <td>{{ i.pageCount }}</td>
-                        <td>{{ i.MRP }}</td>
+                        <td>{{ i.commentText }}</td>
                     </tr>
                 </tbody>
             </table>      
@@ -170,6 +118,6 @@
     <script>
       new Tablesort(document.getElementById("tableSort"));
     </script>
-    <script src="js/booksApp.js"></script>
+    <script src="js/commentsApp.js"></script>
   </body>
 </html>
