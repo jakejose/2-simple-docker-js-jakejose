@@ -81,39 +81,6 @@
             >View Full</a
           >
           <br />Photo by <a href="randomuser.me">randomuser.me</a>
-          <h2>Add a new book</h2>
-          <form>
-            <div class="mb-3">
-              <label for="newRow" class="form-label">Row #</label>
-              <input
-                type="number"
-                class="form-control"
-                id="newRow"
-                aria-describedby="rowHelp"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="bookName" class="form-label">Book Name</label>
-              <input type="text" class="form-control" id="bookName" />
-            </div>
-            <div class="mb-3">
-              <label for="year" class="form-label">Year</label>
-              <input type="date" class="form-control" id="year" />
-            </div>
-            <div class="mb-3">
-              <label for="publisher" class="form-label">Publisher</label>
-              <input type="text" class="form-control" id="publisher" />
-            </div>
-            <div class="mb-3">
-              <label for="pages" class="form-label">Pages</label>
-              <input type="number" class="form-control" id="pages" />
-            </div>
-            <div class="mb-3">
-              <label for="msrp" class="form-label">MSRP ($)</label>
-              <input type="number" class="form-control" id="msrp" />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
         </div>
           <div id = 'bookApp'class="col-6">
             <h4>Favorite Books:<i class="fas fa-sort"></i></h4>
@@ -142,7 +109,32 @@
                         <td>{{ i.MRP }}</td>
                     </tr>
                 </tbody>
-            </table>      
+            </table> 
+            
+            <h2>Add a new book</h2>
+          <form v-on:submit.prevent="postNewOffer">
+            <div class="mb-3">
+              <label for="bookName" class="form-label">Book Name</label>
+              <input type="text" class="form-control" id="bookName"  v-model="bookList.bookName"/>
+            </div>
+            <div class="mb-3">
+              <label for="yearPublished" class="form-label">Year</label>
+              <input type="year" class="form-control" id="yearPublished" v-model="bookList.yearPublished"/>
+            </div>
+            <div class="mb-3">
+              <label for="publisher" class="form-label">Publisher</label>
+              <input type="text" class="form-control" id="publisher" v-model="bookList.publisher"/>
+            </div>
+            <div class="mb-3">
+              <label for="pageCount" class="form-label">Pages</label>
+              <input type="number" class="form-control" id="pageCount" v-model="bookList.pageCount"/>
+            </div>
+            <div class="mb-3">
+              <label for="MRP" class="form-label">MSRP ($)</label>
+              <input type="number" class="form-control" id="MRP" v-model="bookList.MRP"/>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
             
             <!-- Reference for input types: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
           </div>
