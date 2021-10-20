@@ -86,16 +86,16 @@
             <h4>Favorite Books:<i class="fas fa-sort"></i></h4>
             <br/>
             <!-- book table -->
-            <table class="table">
+            <table id = 'tableSort'class="table">
               <thead>
-                <tr>
+                <tr data-sort-method='thead'>
                   <th>ID</th>
-                  <th>Title</th>
-                  <th>Author</th>
-                  <th>Year Published</th>
-                  <th>Publisher</th>
-                  <th>Page Count</th>
-                  <th>MRP</th>
+                  <th data-sort-method='none'>Title</th>
+                  <th >Author</th>
+                  <th data-sort-method='none'>Year Published</th>
+                  <th data-sort-method='none'>Publisher</th>
+                  <th data-sort-method='dotsep'>Page Count</th>
+                  <th data-sort-method='none'>MRP</th>
                 </tr>
               </thead>
                 <tbody>
@@ -115,29 +115,29 @@
           <form v-on:submit.prevent="postNewOffer">
             <div class="mb-3">
               <label for="title" class="form-label">Book Name</label>
-              <input type="text" class="form-control" id="title"  v-model="bookList.title"/>
+              <input type="text" class="form-control" id="title"  v-model="bookForm.title"/>
             </div>
             <div class="mb-3">
               <label for="author" class="form-label">author</label>
-              <input type="text" class="form-control" id="author"  v-model="bookList.author"/>
+              <input type="text" class="form-control" id="author"  v-model="bookForm.author"/>
             </div>
             <div class="mb-3">
               <label for="yearPublished" class="form-label">Year</label>
-              <input type="year" class="form-control" id="yearPublished" v-model="bookList.yearPublished"/>
+              <input type="text" class="form-control" id="yearPublished" v-model="bookForm.yearPublished"/>
             </div>
             <div class="mb-3">
               <label for="publisher" class="form-label">Publisher</label>
-              <input type="text" class="form-control" id="publisher" v-model="bookList.publisher"/>
+              <input type="text" class="form-control" id="publisher" v-model="bookForm.publisher"/>
             </div>
             <div class="mb-3">
               <label for="pageCount" class="form-label">Pages</label>
-              <input type="number" class="form-control" id="pageCount" v-model="bookList.pageCount"/>
+              <input type="number" class="form-control" id="pageCount" v-model="bookForm.pageCount"/>
             </div>
             <div class="mb-3">
               <label for="MRP" class="form-label">MSRP ($)</label>
-              <input type="number" class="form-control" id="MRP" v-model="bookList.MRP"/>
+              <input type="number" class="form-control" id="MRP" v-model="bookForm.MRP"/>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" @click = 'fetchBookData'class="btn btn-primary">Submit</button>
           </form>
             
             <!-- Reference for input types: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
@@ -160,12 +160,14 @@
 
     <!-- Tablesort tags and reference -->
     <!-- http://tristen.ca/tablesort/demo/ -->
-    <script src="js/tablesort.dotsep.min.js"></script>
-    <script src="js/tablesort.number.min.js"></script>
-    <script src="js/tablesort.min.js"></script>
+    <script src='js/tablesort.min.js'></script>
+    <!-- <script src="js/tablesort.dotsep.min.js"></script>
+    <script src="js/tablesort.number.min.js"></script> -->
+
     <script>
       new Tablesort(document.getElementById("tableSort"));
     </script>
+
     <script src="js/booksApp.js"></script>
   </body>
 </html>

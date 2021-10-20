@@ -3,7 +3,7 @@ const newApp = {
     data() {
       return {
         bookList: {},
-        bookForm: {},
+        bookForm: {}
       }
     },
     computed: {},
@@ -14,7 +14,7 @@ const newApp = {
         .then( (responseJson) => {
             console.log(responseJson);
             this.bookList = responseJson;
-            console.log(this.bookList)
+            console.log(this.bookList.length)
         })
         .catch( (err) => {
             console.error(err);
@@ -22,24 +22,31 @@ const newApp = {
     },
     postNewOffer(evt) {   
       
+      this.bookForm.id = this.bookList.length+1
+      
       console.log("Posting!", this.bookForm);
 
       fetch('api/books/create.php', {
           method:'POST',
           body: JSON.stringify(this.bookForm),
           headers: {
-            "Content-Type": "application/json; charset=utf-8"
+            "Content-Type": "application/json; charset=utf-8",
+            'Accept': 'application/json'
           }
-        })
-        .then( response => response.json() )
-        .then( json => {
-          console.log("Returned from post:", json);
-          // TODO: test a result was returned!
-          this.bookList = json;
+        }).then(next =>{this.fetchBookData();})
+      //   .then( response => response.json() )
+      //   .then( (json) => {
+      //     //console.log("Returned from post:", json);
+      //     // TODO: test a result was returned!
+      //     this.bookList = json;
           
-          // reset the form
-          this.bookForm = {};
-        });
+      //     // reset the form
+      //     this.bookForm = {};
+          
+      //   }).catch( (err) => {
+      //     console.error(err);
+      // })
+      
     }
     },
     created() {
