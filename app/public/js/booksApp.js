@@ -20,7 +20,7 @@ const newApp = {
             console.error(err);
         })
     },
-    postNewOffer(evt) {   
+    postNewBook(evt) {   
       
       this.bookForm.id = this.bookList.length+1
       
