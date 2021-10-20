@@ -22,7 +22,7 @@ const newApp = {
     },
     postNewBook(evt) {   
       
-      this.bookForm.id = this.bookList.length+1
+      this.bookForm.id = this.bookList.length+1;
       
       console.log("Posting!", this.bookForm);
 
