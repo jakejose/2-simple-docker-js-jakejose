@@ -107,6 +107,11 @@
                         <td>{{ i.publisher }}</td>
                         <td>{{ i.pageCount }}</td>
                         <td>{{ i.MRP }}</td>
+                        <td>
+                          <button type="button" class="btn btn-outline-secondary btn-sm"
+                          v-on:click="editOffer(i)">Edit</button>
+                          <button type="button" class="btn btn-outline-secondary btn-sm">Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table> 

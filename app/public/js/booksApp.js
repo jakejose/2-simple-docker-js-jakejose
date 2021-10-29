@@ -34,19 +34,10 @@ const newApp = {
             'Accept': 'application/json'
           }
         }).then(next =>{this.fetchBookData();})
-      //   .then( response => response.json() )
-      //   .then( (json) => {
-      //     //console.log("Returned from post:", json);
-      //     // TODO: test a result was returned!
-      //     this.bookList = json;
-          
-      //     // reset the form
-      //     this.bookForm = {};
-          
-      //   }).catch( (err) => {
-      //     console.error(err);
-      // })
       
+    },
+    editBook(o) {
+      console.log(o)
     }
     },
     created() {
