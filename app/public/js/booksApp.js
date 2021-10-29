@@ -124,3 +124,4 @@ const newApp = {
   }
   
   Vue.createApp(newApp).mount('#bookApp');
+  
